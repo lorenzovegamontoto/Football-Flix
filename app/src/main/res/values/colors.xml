@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colors -->
+    <color name="pitch_green">#0D4D1C</color>
+    <color name="dark_pitch_green">#082E11</color>
+    <color name="golden_accent">#D4AF37</color>
+    <color name="bright_gold">#FFD700</color>
+    
+    <!-- Background hierarchy -->
+    <color name="cinema_black">#0A0A0A</color>
+    <color name="deep_charcoal">#121212</color>
+    <color name="card_dark">#1A1A1A</color>
+    <color name="card_elevated">#222222</color>
+    <color name="surface_variant_dark">#2A2A2A</color>
+    
+    <!-- Text colors -->
+    <color name="text_primary">#F5F5F5</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="text_tertiary">#707070</color>
+    
+    <!-- Semantic colors -->
+    <color name="error_red">#CF6679</color>
+    <color name="success_green">#4CAF50</color>
+    <color name="warning_amber">#FFB74D</color>
+    <color name="netflix_red">#E50914</color>
+    
+    <!-- Legacy/compatibility -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

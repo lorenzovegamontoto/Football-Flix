@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="Theme.FootballClassics" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/golden_accent</item>
+        <item name="colorPrimaryDark">@color/dark_pitch_green</item>
+        <item name="colorAccent">@color/golden_accent</item>
+        <item name="android:colorBackground">@color/cinema_black</item>
+        <item name="android:windowBackground">@color/cinema_black</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/cinema_black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+    <!-- Splash screen theme -->
+    <style name="Theme.FootballClassics.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/cinema_black</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="postSplashScreenTheme">@style/Theme.FootballClassics</item>
+    </style>
+
+    <!-- Player theme (fullscreen, no system bars) -->
+    <style name="Theme.FootballClassics.Player" parent="Theme.FootballClassics">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>

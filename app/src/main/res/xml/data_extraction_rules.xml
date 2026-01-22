@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="sharedpref" path="."/>
+        <include domain="database" path="football_classics_db"/>
+    </cloud-backup>
+    <device-transfer>
+        <include domain="sharedpref" path="."/>
+        <include domain="database" path="football_classics_db"/>
+    </device-transfer>
+</data-extraction-rules>
