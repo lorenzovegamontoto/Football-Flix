@@ -2,9 +2,11 @@
 <resources>
     <!-- Base application theme -->
     <style name="Theme.FootballClassics" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Material3 color attributes -->
         <item name="colorPrimary">@color/golden_accent</item>
-        <item name="colorPrimaryDark">@color/dark_pitch_green</item>
-        <item name="colorAccent">@color/golden_accent</item>
+        <item name="colorOnPrimary">@color/cinema_black</item>
+        <item name="colorPrimaryContainer">@color/dark_pitch_green</item>
+        <item name="colorSecondary">@color/golden_accent</item>
         <item name="android:colorBackground">@color/cinema_black</item>
         <item name="android:windowBackground">@color/cinema_black</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
@@ -16,7 +18,6 @@
     <!-- Splash screen theme -->
     <style name="Theme.FootballClassics.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/cinema_black</item>
-        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
         <item name="postSplashScreenTheme">@style/Theme.FootballClassics</item>
     </style>
 
