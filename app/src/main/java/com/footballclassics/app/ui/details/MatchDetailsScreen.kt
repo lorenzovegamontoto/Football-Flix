@@ -66,7 +66,7 @@ fun MatchDetailsScreen(matchId: String, onBackClick: () -> Unit, onPlayClick: (M
 
     when (uiState) {
         is DetailsUiState.Loading -> LoadingScreen()
-        is DetailsUiState.Error -> ErrorScreen((uiState as DetailsUiState.Error).message) { viewModel.loadMatch(matchId) }
+        is DetailsUiState.Error -> ErrorScreen(message = (uiState as DetailsUiState.Error).message, onRetry = { viewModel.loadMatch(matchId) })
         is DetailsUiState.Success -> match?.let { m ->
             Box(Modifier.fillMaxSize().background(FootballColors.background)) {
                 Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
@@ -88,7 +88,7 @@ fun MatchDetailsScreen(matchId: String, onBackClick: () -> Unit, onPlayClick: (M
                         if (m.homeScore != null && m.awayScore != null) { Spacer(Modifier.height(8.dp)); Text("Final: ${m.homeScore} - ${m.awayScore}", style = MaterialTheme.typography.titleLarge, color = FootballColors.accent, fontWeight = FontWeight.Bold) }
                         Spacer(Modifier.height(8.dp))
                         Row(verticalAlignment = Alignment.CenterVertically) {
-                            if (m.matchDate.isNotBlank()) { Icon(Icons.Default.CalendarToday, null, FootballColors.textSecondary, Modifier.size(16.dp)); Spacer(Modifier.width(4.dp)); Text(m.matchDate, style = MaterialTheme.typography.bodyMedium, color = FootballColors.textSecondary); Spacer(Modifier.width(16.dp)) }
+                            if (m.matchDate.isNotBlank()) { Icon(Icons.Default.CalendarToday, contentDescription = null, tint = FootballColors.textSecondary, modifier = Modifier.size(16.dp)); Spacer(Modifier.width(4.dp)); Text(m.matchDate, style = MaterialTheme.typography.bodyMedium, color = FootballColors.textSecondary); Spacer(Modifier.width(16.dp)) }
                             if (m.season.isNotBlank()) Text("Season: ${m.season}", style = MaterialTheme.typography.bodyMedium, color = FootballColors.textSecondary)
                         }
                         Spacer(Modifier.height(24.dp))

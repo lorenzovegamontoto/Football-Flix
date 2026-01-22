@@ -129,7 +129,7 @@ fun MatchCard(
 
             if (showProgress && progressPercent > 0) {
                 LinearProgressIndicator(
-                    progress = { progressPercent },
+                    progress = progressPercent,
                     modifier = Modifier.align(Alignment.BottomCenter).fillMaxWidth().height(3.dp),
                     color = FootballColors.red,
                     trackColor = FootballColors.textTertiary.copy(alpha = 0.3f)

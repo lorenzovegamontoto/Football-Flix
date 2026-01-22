@@ -60,7 +60,7 @@ fun CompetitionsScreen(onCompetitionClick: (Competition) -> Unit, viewModel: Com
 
         when (uiState) {
             is CompetitionsUiState.Loading -> LoadingScreen()
-            is CompetitionsUiState.Error -> ErrorScreen((uiState as CompetitionsUiState.Error).message) { viewModel.loadCompetitions() }
+            is CompetitionsUiState.Error -> ErrorScreen(message = (uiState as CompetitionsUiState.Error).message, onRetry = { viewModel.loadCompetitions() })
             is CompetitionsUiState.Success -> {
                 LazyVerticalGrid(
                     columns = GridCells.Fixed(2),
